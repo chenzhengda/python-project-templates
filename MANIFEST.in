@@ -1,7 +1,23 @@
+# MANIFEST.in 文件的作用是告诉 Python 的打包工具（如 setuptools）在构建分发包时应该包含哪些文件，以及应该排除哪些文件。通常，这个文件会列出一系列的包含（include）和排除（exclude）规则，告诉打包工具如何处理项目中的各种文件。
+
+# 具体来说，MANIFEST.in 文件的作用包括：
+
+# 1. **指定包含的文件和目录**：通过指定 `include` 和 `graft` 指令，可以告诉打包工具应该包含哪些文件和目录。
+
+# 2. **指定排除的文件和目录**：通过指定 `exclude` 和 `prune` 指令，可以告诉打包工具应该排除哪些文件和目录，不包含在分发包中。
+
+# 3. **全局排除规则**：可以使用 `global-exclude` 指令指定一些全局的排除规则，告诉打包工具哪些文件应该在所有目录中排除。
+
+# 4. **指定特定文件的包含和排除**：可以使用具体的文件路径或者通配符来指定特定文件的包含和排除规则。
+
+# 5. **指定额外的元数据文件**：除了 setup.py 文件中的元数据，还可以通过 MANIFEST.in 文件指定一些额外的元数据文件，如 LICENSE、README 等。
+
+总的来说，MANIFEST.in 文件提供了一种灵活的方式，让开发者能够控制分发包中包含哪些文件，从而确保分发包的内容符合预期。
 graft python_template
 
 include LICENSE
 include README.md
+include README_EN.md
 
 prune docs
 prune .vscode
@@ -12,6 +28,7 @@ prune .ruff_cache
 prune .mypy_cache
 
 exclude CONTRIBUTING.md
+exclude CONTRIBUTING_EN.md
 exclude .bumpversion.cfg
 exclude pyproject.toml
 exclude Makefile

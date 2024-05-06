@@ -1,19 +1,30 @@
+# * 这是一个 GitHub Actions 的配置文件（YAML 格式），用于定义构建流程。该文件包括以下内容：
+
+# * 定义了工作流的名称为 "Build Status"。
+# * 触发条件包括 push 到 main 分支、打标签以及忽略特定文件夹和文件的变动；同时也包括 pull request 到 main 分支和手动触发工作流。
+# * 设置了并发策略，以及对仓库内容、检查和 pull 请求的权限控制。
+# * 定义了一个名为 "build" 的 job，该 job 在 ubuntu-latest 环境下运行。
+# * 使用了一个矩阵策略，指定了操作系统和 Python 版本的组合。
+# * 包含了一系列步骤，包括设置 Python 环境、安装依赖、代码检查、构建、测试、上传测试结果、发布单元测试结果、上传覆盖率、以及构建分发包等。
+
+# * 这些步骤将在满足特定条件时执行，例如只有在 ubuntu-latest 环境下才执行 lint、checks、test 等步骤。
+
 name: Build Status
 
 on:
   push:
     branches:
-      - main
+    - main
     tags:
-      - v*
+    - v*
     paths-ignore:
-      - docs/
-      - CONTRIBUTING.md
-      - LICENSE
-      - README.md
+    - docs/
+    - CONTRIBUTING.md
+    - LICENSE
+    - README.md
   pull_request:
     branches:
-      - main
+    - main
   workflow_dispatch:
 
 concurrency:
@@ -73,7 +84,7 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         files: |
-            **/junit.xml
+          **/junit.xml
       if: ${{ matrix.os == 'ubuntu-latest' }}
 
     - name: Upload coverage

@@ -1,10 +1,14 @@
+# 这是一个YAML文件，其中包含了更新计划的信息。文件的顶部指定了版本号为2。
+# 在updates字段下列出了两个更新条目，分别针对github-actions和pip包管理系统。
+# 每个更新条目包括了package-ecosystem（包生态系统）、directory（目录）和schedule（计划）字段。
+# 在schedule字段中指定了更新的间隔为"monthly"（每月一次）。
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "monthly"
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "monthly"
+- package-ecosystem: "github-actions"
+  directory: "/"
+  schedule:
+    interval: "monthly"
+- package-ecosystem: "pip"
+  directory: "/"
+  schedule:
+    interval: "monthly"

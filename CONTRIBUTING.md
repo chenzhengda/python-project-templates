@@ -1,45 +1,42 @@
-# Contributing
+# 贡献
 
-If you want to contribute to this repository here are some helpful guidelines.
+如果您想要为这个仓库做贡献，以下是一些有用的指南。
 
-## Reporting bugs, feature requests, etc.
+简体中文 | [English](CONTRIBUTING_EN.md)
 
-To report bugs, request new features or similar, please open an issue on the Github
-repository.
+## 报告 bug、提出新功能等
 
-A good bug report includes:
+要报告 bug、请求新功能或类似的事情，请在 Github 仓库上开启一个 issue。
 
-- Expected behavior
-- Actual behavior
-- Steps to reproduce (preferably as minimal as possible)
-- Possibly any output from the browser console (typically available via Ctrl + Shift + J or via F12).
+一个好的 bug 报告包括：
 
-## Minor changes, typos etc.
+- 期望的行为
+- 实际的行为
+- 重现步骤（最好尽可能简洁）
+- 可能的浏览器控制台输出（通常可以通过 Ctrl + Shift + J 或 F12 获得）
 
-Minor changes can be contributed by navigating to the relevant files on the Github repository,
-and clicking the "edit file" icon. By following the instructions on the page you should be able to
-create a pull-request proposing your changes. A repository maintainer will then review your changes,
-and either merge them, propose some modifications to your changes, or reject them (with a reason for
-the rejection).
+## 小改动、错别字等
 
-## Setting up a development environment
+可以通过导航到 Github 仓库上相关文件，并点击“编辑文件”图标来贡献小改动。按照页面上的说明，您应该能够创建一个拉取请求（pull-request）来提议您的更改。
+仓库维护者将会审查您的更改，并且要么合并它们，要么提出一些修改意见，或者拒绝它们（并附上拒绝的原因）。
 
-If you want to help resolve an issue by making some changes that are larger than that covered by the above paragraph, it is recommended that you:
+## 设置开发环境
 
-- Fork the repository on Github
-- Clone your fork to your computer
-- Run the following commands inside the cloned repository:
-  - `make develop` - This will install the package in development
-    mode
-- Validate the install by running the tests:
-  - `make lint` - This command will run any static analysis tools/lints
-  - `make test` - This command will run the unit tests
-  - `make check` - This command will run any other checks
+如果您想通过进行一些大于上述段落所涵盖的更改来帮助解决问题，建议您：
 
-Once you have such a development setup, you should:
+- 在 Github 上 fork 该仓库
+- 将您的 fork 克隆到您的计算机上
+- 在克隆的仓库内运行以下命令：
+  - `make develop` - 这将以开发模式安装该包
+- 通过运行测试来验证安装：
+  - `make lint` - 这个命令将运行任何静态分析工具/检查
+  - `make test` - 这个命令将运行单元测试
+  - `make check` - 这个命令将运行任何其他检查
 
-- Make the changes you consider necessary
-- Run the tests to ensure that your changes does not break anything
-- If you add new code, preferably write one or more tests for checking that your code works as expected.
-- Commit your changes and publish the branch to your github repo.
-- Open a pull-request (PR) back to the main repo on Github.
+一旦您拥有这样的开发设置，您应该：
+
+- 进行您认为必要的更改
+- 运行测试以确保您的更改不会破坏任何东西
+- 如果您添加了新代码，最好编写一个或多个测试来检查您的代码是否按预期工作
+- 提交您的更改并将分支发布到您的 Github 仓库
+- 在 Github 上向主仓库开启一个拉取请求（PR）。

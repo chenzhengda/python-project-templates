@@ -1,3 +1,14 @@
+# * 这个代码片段展示了一个.gitattributes文件的内容。.gitattributes文件用于指定特定文件或路径的属性，比如文本处理方式和换行符类型。
+
+# 在这个例子中，文件指定了以下规则：
+# examples/* linguist-documentation：将examples目录下的所有文件标记为linguist-documentation，这可能会影响GitHub对这些文件的语言识别。
+# docs/* linguist-documentation：将docs目录下的所有文件标记为linguist-documentation。
+# *.ipynb linguist-documentation：将所有.ipynb文件标记为linguist-documentation。
+# Makefile linguist-documentation：将Makefile文件标记为linguist-documentation。
+
+
+# 最后一行* text=auto eol=lf指定了默认规则，即将所有文件视为文本文件（text=auto），并使用LF作为换行符（eol=lf）。
+
 examples/* linguist-documentation
 docs/* linguist-documentation
 *.ipynb linguist-documentation
